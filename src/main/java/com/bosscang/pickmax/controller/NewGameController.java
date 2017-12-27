@@ -23,7 +23,7 @@ public class NewGameController {
     @ResponseBody
     @RequestMapping(value = "/pickmax/newgame", method = RequestMethod.GET)
     public Response<GameData> newGame(@RequestParam("token") String token) {
-        return ResponseUtils.buildResponse(200, "OK", gameService.getGameDataForToken(token));
+        return ResponseUtils.buildResponse(Response.CODE_SUCCESS, "OK", gameService.getGameDataForToken(token));
     }
 
 }
